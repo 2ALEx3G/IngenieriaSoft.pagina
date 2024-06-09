@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF; /* Fondo blanco */
+}
+
+header {
+    background-color: #000080; /* Fondo azul marino */
+    color: #FFFFFF;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo {
+    margin-bottom: 1rem; /* Espacio entre la imagen y el texto */
+}
+
+header .logo img {
+    width: 90px; /* Tamaño de la imagen */
+    height: 90px; /* Mantén la imagen cuadrada */
+    object-fit: cover; /* Asegura que la imagen se mantenga cuadrada incluso si no lo es originalmente */
+}
+
+.header-text {
+    text-align: center;
+}
+
+header h1, header h5 {
+    margin: 0;
+    font-family: 'Rundeck', sans-serif; /* Fuente Rundeck */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: white; /* Texto de navegación en blanco */
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2, section h3 {
+    color: black; /* Color negro para los títulos */
+    font-family: 'Rundeck', sans-serif; /* Fuente Rundeck */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 0.5rem;
+}
+
+form input {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #000080;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF7F50;
+}
+
+#lista-clientes, #reporte-ventas {
+    margin-top: 1rem;
+}
+
+#productos-disponibles ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#productos-disponibles li {
+    padding: 0.5rem 0;
+    color: black; /* Color negro para los productos */
+    font-family: Arial, sans-serif; /* Fuente Arial */
+}
+
+.imagenes-productos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en múltiples filas */
+    gap: 1rem; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+}
+
+.producto {
+    text-align: center;
+    border: 1px solid #ddd; /* Añade un borde ligero a los contenedores de productos */
+    border-radius: 8px; /* Añade bordes redondeados a los contenedores de productos */
+    padding: 1rem;
+    width: 150px; /* Ajusta el tamaño del contenedor */
+    background-color: #f9f9f9; /* Fondo ligero para los contenedores */
+}
+
+.producto img {
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: 100px; /* Mantén la imagen cuadrada */
+    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones y se recorte si es necesario */
+    margin-bottom: 0.5rem; /* Espacio entre la imagen y el texto */
+}
+
+.producto p {
+    margin: 0.5rem 0;
+    color: #333; /* Color del texto */
+    font-size: 0.9rem; /* Tamaño de la fuente */
+}
+
+/* Formato del formulario de clientes */
+#clientes-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.metodo-pago {
+    margin-bottom: 1rem;
+}
+
+.metodo-pago label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.metodo-pago input[type="file"] {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #000080;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF7F50;
+}
+

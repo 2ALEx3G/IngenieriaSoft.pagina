@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Punto de Venta - Florería</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rundeck&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="floreria.jpg" alt="Logo de la Florería">
+        </div>
+        <div class="header-text">
+            <h1>Itsi Flowers</h1>
+            <h5>Flores eternas para las almas bonitas</h5>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#ventas">Procesamiento de Ventas</a></li>
+                <li><a href="#clientes">Gestión de Clientes</a></li>
+                <li><a href="#reportes">Reportes</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <div id="productos-disponibles">
+                <h3>Productos Disponibles</h3>
+                <div class="imagenes-productos">
+                    <!-- Productos aquí -->
+                </div>
+            </div>
+            <div id="registro-usuario">
+                <h3>Registro de Usuario</h3>
+                <form id="registro-form">
+                    <label for="usuario-nombre">Nombre:</label>
+                    <input type="text" id="usuario-nombre" name="usuario-nombre" required>
+
+                    <label for="usuario-apellido">Apellido:</label>
+                    <input type="text" id="usuario-apellido" name="usuario-apellido" required>
+
+                    <label for="usuario-calle">Calle:</label>
+                    <input type="text" id="usuario-calle" name="usuario-calle" required>
+
+                    <label for="usuario-numero">Número:</label>
+                    <input type="text" id="usuario-numero" name="usuario-numero" required>
+
+                    <label for="usuario-codigo-postal">Código Postal:</label>
+                    <input type="text" id="usuario-codigo-postal" name="usuario-codigo-postal" required>
+
+                    <label for="usuario-colonia">Colonia o Barrio:</label>
+                    <input type="text" id="usuario-colonia" name="usuario-colonia" required>
+
+                    <label for="usuario-localidad">Localidad o Ciudad:</label>
+                    <input type="text" id="usuario-localidad" name="usuario-localidad" required>
+
+                    <label for="usuario-estado">Estado:</label>
+                    <input type="text" id="usuario-estado" name="usuario-estado" required>
+                    
+                    <label for="usuario-correo">Correo Electrónico:</label>
+                    <input type="email" id="usuario-correo" name="usuario-correo" required>
+                    
+                    <label for="usuario-telefono">Número de Teléfono:</label>
+                    <input type="tel" id="usuario-telefono" name="usuario-telefono" required>
+                    
+                    <button type="submit">Registrarse</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="ventas">
+            <h2>Procesamiento de Ventas</h2>
+            <form id="ventas-form">
+                <label for="cliente-seleccion">Cliente:</label>
+                <select id="cliente-seleccion" name="cliente-seleccion" required>
+                    <option value="">Seleccione un cliente</option>
+                    <!-- Clientes se cargarán dinámicamente -->
+                </select>
+                
+                <label for="producto">Producto:</label>
+                <input type="text" id="producto" name="producto" required>
+                
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+                
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" required>
+                
+                <button type="submit">Registrar Venta</button>
+            </form>
+        </section>
+        
+        <section id="clientes">
+            <h2>Método de Pago</h2>
+            <form id="clientes-form">
+                <label for="metodo-pago">Seleccione el método de pago:</label>
+                <select id="metodo-pago" name="metodo-pago" required>
+                    <option value="">--Seleccione una opción--</option>
+                    <option value="transferencia">Transferencia</option>
+                    <option value="efectivo">Efectivo</option>
+                </select>
+                
+                <div id="pago-transferencia" class="metodo-pago" style="display: none;">
+                    <label for="nombre-transferencia">Nombre:</label>
+                    <input type="text" id="nombre-transferencia" name="nombre-transferencia">
+                    
+                    <label for="comprobante-transferencia">Comprobante de Transferencia:</label>
+                    <input type="file" id="comprobante-transferencia" name="comprobante-transferencia" accept="image/*,application/pdf">
+                </div>
+                
+                <div id="pago-efectivo" class="metodo-pago" style="display: none;">
+                    <label for="monto-efectivo">Monto en Efectivo:</label>
+                    <input type="number" id="monto-efectivo" name="monto-efectivo">
+                </div>
+                
+                <button type="submit">Registrar Cliente</button>
+            </form>
+            <div id="lista-clientes"></div>
+        </section>
+        
+        <section id="reportes">
+            <h2>Reportes</h2>
+            <button id="generar-reporte">Generar Reporte</button>
+            <div id="reporte-ventas"></div>
+        </section>
+    </main>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
